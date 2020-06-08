@@ -33,3 +33,6 @@ insert into category  values (4,'Donations');
 insert into expense values (100,'New York Business Trip','2019-06-16','New York',1,1);
 insert into expense values (101,'Ford Mustang Payment','2019-06-15','Los Angeles',2,2);
 insert into expense values(102,'Grand Canyon Trip With Family','2019-06-15','Arizona',3,1);
+
+ALTER TABLE `Goal`.`expense` 
+CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;

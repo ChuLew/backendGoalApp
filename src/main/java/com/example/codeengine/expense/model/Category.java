@@ -9,8 +9,9 @@ import lombok.*;
 @Entity
 @Table(name = "category")
 public class Category {
-
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private long id;
 	@NotNull
 	private String name;

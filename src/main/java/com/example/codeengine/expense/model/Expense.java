@@ -13,6 +13,8 @@ import lombok.*;
 @Table(name = "expense")
 public class Expense {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private Long id;
 	
 	private Instant expensedate;
