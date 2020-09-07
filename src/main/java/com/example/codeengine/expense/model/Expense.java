@@ -30,6 +30,8 @@ public class Expense {
 	@JsonIgnore
 	@ManyToOne //many of these expenses can go under one user This variable is a foreign key to category table
 	private User user;
+	
+	private double price;
 
 	public Long getId() {
 		return id;
@@ -77,6 +79,14 @@ public class Expense {
 
 	public void setUser(User user) {
 		this.user = user;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	
 	

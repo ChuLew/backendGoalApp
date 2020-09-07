@@ -36,3 +36,18 @@ insert into expense values(102,'Grand Canyon Trip With Family','2019-06-15','Ari
 
 ALTER TABLE `Goal`.`expense` 
 CHANGE COLUMN `id` `id` BIGINT NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE `Goal`.`expense` 
+ADD COLUMN `price` DECIMAL(13,4) NULL AFTER `user_id`;
+UPDATE `Goal`.`expense` SET `price` = '2500' WHERE (`id` = '100');
+UPDATE `Goal`.`expense` SET `price` = '239' WHERE (`id` = '101');
+UPDATE `Goal`.`expense` SET `price` = '5000' WHERE (`id` = '102');
+UPDATE `Goal`.`expense` SET `price` = '45' WHERE (`id` = '153');
+UPDATE `Goal`.`expense` SET `price` = '8' WHERE (`id` = '154');
+
+UPDATE `Goal`.`category` SET `name` = 'Grocery' WHERE (`id` = '1');
+UPDATE `Goal`.`category` SET `name` = 'Housing' WHERE (`id` = '2');
+UPDATE `Goal`.`category` SET `name` = 'Enjoyment' WHERE (`id` = '3');
+UPDATE `Goal`.`category` SET `name` = 'Vacation' WHERE (`id` = '4');
+INSERT INTO `Goal`.`category` (`id`, `name`) VALUES ('5', 'Transportation');
+
